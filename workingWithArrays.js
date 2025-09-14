@@ -102,6 +102,3 @@ const negativeArray = arr6.filter(n => n < 0);
 
 console.log("Positive array:", positiveArray);
 console.log("Negative array:", negativeArray);
-
-// 7.
-
