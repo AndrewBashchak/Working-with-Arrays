@@ -1,1 +1,2 @@
-# Working-with-arrays
+# Working with Arrays
+Andrew Bashchak IPZs-24-2
