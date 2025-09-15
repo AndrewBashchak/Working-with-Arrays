@@ -102,3 +102,21 @@ const negativeArray = arr6.filter(n => n < 0);
 
 console.log("Positive array:", positiveArray);
 console.log("Negative array:", negativeArray);
+
+// 7.
+
+let arr7 = [-9, 2, 0, 5, -9, -4, 5];
+
+console.log("7. Array:", arr7);
+console.log('');
+
+const minimum7 = Math.min(...arr7);
+const maximum7 = Math.max(...arr7);
+
+const minIndex7 = arr7.indexOf(minimum7);
+const maxIndex7 = arr7.indexOf(maximum7);
+
+// arr7.splice(minIndex7, 1);
+arr7.splice(maxIndex7, 1);
+
+console.log(arr7);
