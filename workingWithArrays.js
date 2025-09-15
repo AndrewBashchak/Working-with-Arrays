@@ -92,7 +92,7 @@ console.log('');
 
 // 6.
 
-const arr6 = [1, -2, -4, 7, -10];
+const arr6 = [7, -4, -10, 1, -2];
 
 console.log("6. Array:", arr6);
 console.log('');
@@ -110,13 +110,25 @@ let arr7 = [-9, 2, 0, 5, -9, -4, 5];
 console.log("7. Array:", arr7);
 console.log('');
 
-const minimum7 = Math.min(...arr7);
-const maximum7 = Math.max(...arr7);
+const min7 = Math.min(...arr7);
+const max7 = Math.max(...arr7);
 
-const minIndex7 = arr7.indexOf(minimum7);
-const maxIndex7 = arr7.indexOf(maximum7);
+let countMin = 0;
+let countMax = 0;
 
-// arr7.splice(minIndex7, 1);
-arr7.splice(maxIndex7, 1);
+for (let i = arr7.length - 1; i >= 0; i--) {
+  if (arr7[i] === min7) {
+    countMin++;
+    if (countMin > 1) arr7.splice(i, 1);
+  };
 
-console.log(arr7);
+  if (arr7[i] === max7) {
+    countMax++;
+    if (countMax > 1) arr7.splice(i, 1);
+  };
+};
+
+console.log("Array with removed duplicates of minimum and maximum:", arr7);
+console.log('');
+
+// 8.
