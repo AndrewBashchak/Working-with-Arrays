@@ -8,11 +8,11 @@ for (let i = 0; i < length; i++) {
     randomNumbersArray.push(randomNumber);
 };
 
-const format1 = randomNumbersArray.map(
+const format = randomNumbersArray.map(
     (n, i) => `[element_${i + 1}_value_${n}]`
 );
 
-console.log(format1);
+console.log(format);
 
 // 1.
 
@@ -30,17 +30,16 @@ console.log(`2. Arithmetic mean: ${arithmeticMean}, count of numbers which are g
 
 // 3.
 
-const arr31 = [3, 21, -9, 0, -4];
-const arr32 = [4, -8, 9, 7, 6];
+const arr1 = [3, 21, -9, 0, -4];
+const arr2 = [4, -8, 9, 7, 6];
 
-console.log("3. First array:", arr31);
-console.log("   Second array:", arr32);
-console.log('');
+console.log("3. First array:", arr1);
+console.log("   Second array:", arr2);
 
 const sumArrays = [];
 
-for (let i = 0; i < arr31.length; i++) {
-    sumArrays.push(arr31[i] + arr32[i]);
+for (let i = 0; i < arr1.length; i++) {
+    sumArrays.push(arr1[i] + arr2[i]);
 };
 
 console.log("Sum of identical indices of two arrays:", sumArrays);
@@ -61,7 +60,6 @@ console.log('');
 let arr5 = [-3, 12, 5, 0, -8];
 
 console.log("5. Array:", arr5);
-console.log('');
 
 let minIndex = 0;
 let maxIndex = 0;
@@ -81,7 +79,6 @@ const maximum = Math.max(...arr5);
 
 console.log("Minimum:", minimum);
 console.log("Maximum:", maximum);
-console.log('');
 
 let replace = arr5[minIndex];
 arr5[minIndex] = arr5[maxIndex];
@@ -95,20 +92,19 @@ console.log('');
 const arr6 = [7, -4, -10, 1, -2];
 
 console.log("6. Array:", arr6);
-console.log('');
 
 const positiveArray = arr6.filter(n => n > 0);
 const negativeArray = arr6.filter(n => n < 0);
 
 console.log("Positive array:", positiveArray);
 console.log("Negative array:", negativeArray);
+console.log('');
 
 // 7.
 
 let arr7 = [-9, 2, 0, 5, -9, -4, 5];
 
 console.log("7. Array:", arr7);
-console.log('');
 
 const min7 = Math.min(...arr7);
 const max7 = Math.max(...arr7);
@@ -117,18 +113,36 @@ let countMin = 0;
 let countMax = 0;
 
 for (let i = arr7.length - 1; i >= 0; i--) {
-  if (arr7[i] === min7) {
-    countMin++;
-    if (countMin > 1) arr7.splice(i, 1);
-  };
+    if (arr7[i] === min7) {
+        countMin++;
+        if (countMin > 1) arr7.splice(i, 1);
+    };
 
-  if (arr7[i] === max7) {
-    countMax++;
-    if (countMax > 1) arr7.splice(i, 1);
-  };
+    if (arr7[i] === max7) {
+        countMax++;
+        if (countMax > 1) arr7.splice(i, 1);
+    };
 };
 
-console.log("Array with removed duplicates of minimum and maximum:", arr7);
+console.log("Array with deleted duplicates of minimum and maximum:", arr7);
 console.log('');
 
 // 8.
+
+const arr81 = [6, 12, 20, 8, -7, -3];
+const arr82 = [1, -8, -55, 5, -2, 2];
+
+console.log("8. First array:", arr81);
+console.log("   Second array:", arr82);
+
+const arithmeticMean81 = arr81.reduce((a, b) => a + b, 0) / arr81.length;
+const arithmeticMean82 = arr82.reduce((a, b) => a + b, 0) / arr82.length;
+
+const lower = Math.min(arithmeticMean81, arithmeticMean82);
+const upper = Math.max(arithmeticMean81, arithmeticMean82);
+
+console.log(`Rounded arithmetic averages of two arrays: ${Math.round(lower)}, ${Math.round(upper)}.`);
+
+const arr83 = [...arr81, ...arr82].filter(n => n >= lower && n <= upper);
+
+console.log("The array is made by limiting the two arithmetic means:", arr83);
