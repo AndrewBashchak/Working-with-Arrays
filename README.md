@@ -1,4 +1,2 @@
 # Working with Arrays
-Andrew Bashchak
-Student of KDU
-Group: IPZs-24-2
+Andrew Bashchak, student of KDU, group: IPZs-24-2
