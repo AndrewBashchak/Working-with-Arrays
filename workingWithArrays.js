@@ -23,7 +23,8 @@ const format2 = randomNumbersArray2.map(
     (n, i) => `[element_${i + 1}_value_${n}]`
 );
 
-console.log(format1);
+console.log("First array:", format1);
+console.log("Second array:", format2);
 
 // 1.
 
@@ -86,7 +87,7 @@ console.log('');
 
 // 5.
 
-console.log("Array:", format1);
+console.log("5. Array:", format1);
 
 let minIndex = 0;
 let maxIndex = 0;
