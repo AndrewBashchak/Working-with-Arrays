@@ -9,7 +9,7 @@ for (let i = 0; i < length; i++) {
 };
 
 const format1 = randomNumbersArray1.map(
-    (n, i) => `[element_${i + 1}_value_${n}]`
+    (n, i) => `[element_${i}_value_${n}]`
 );
 
 const randomNumbersArray2 = [];
@@ -192,3 +192,4 @@ const format8 = arr8.map(
 );
 
 console.log("The array is made by limiting the two arithmetic means:", format8);
+
